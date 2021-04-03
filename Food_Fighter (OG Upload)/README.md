@@ -4,6 +4,12 @@
 #                C++ Program for the TI-84 Plus CE                  #
 #-------------------------------------------------------------------#
 
+POST-CONTEST EDIT: This is an exact duplicate of the original entry,
+but I have removed the converted images from the source to decrease
+size and included links to an archived Github repo and the original
+post now that they both no longer need updating. I also added an
+animated PNG of the gameplay as a preview.
+
 Wow, look at that title box! That's a pretty good box if I do say
 so myself! And with ASCII too, I'm impressed by my latent art skillz.
 
@@ -76,8 +82,8 @@ a worse way!"
 
 Bug reports and comments can go to the Github repo or the relevant
 Cemetech post:
-[Github repo pending]
-[Cemetech link pending]
+https://github.com/KingDubDub/Food-Fighter
+https://www.cemetech.net/forum/viewtopic.php?t=17457
 
 Tips 'n tricks for the weak:
 - Strafing is annoying at first, but it's extremely useful when you're
