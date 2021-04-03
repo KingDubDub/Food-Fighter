@@ -1,0 +1,162 @@
+palettes:
+  - name: main_palette
+    fixed-entries:
+      - color: {index: 0, r: 255, g:   0, b: 128}   #transparent color (hot pink)
+      - color: {index: 1, r:   0, g:   0, b:   0}
+      - color: {index: 2, r: 255, g: 255, b: 255}
+      - color: {index: 3, r:  40, g:  40, b:  40}   #temperature gauge grey color
+      - color: {index: 4, r: 255, g: 220, b:   0}
+      - color: {index: 5, r: 255, g: 179, b:   0}
+      - color: {index: 6, r: 255, g: 150, b:   0}
+      - color: {index: 7, r: 255, g: 100, b:   0}   #indices 4-7 are static fire colors for procedural explosions
+    images: automatic
+
+converts:
+  - name: Jerry_sprite
+    palette: main_palette #the sprites are split into individual arrays for optimized size:
+    images:
+      - Jerry/Jerry0.png
+      - Jerry/Jerry1.png
+      - Jerry/Jerry2.png
+      - Jerry/Jerry3.png
+      - Jerry/Jerry4.png
+      - Jerry/Jerry5.png
+      - Jerry/Jerry6.png
+      - Jerry/Jerry7.png
+      - Jerry/Jerry8.png
+      - Jerry/Jerry9.png
+      - Jerry/Jerry10.png
+      - Jerry/Jerry11.png
+
+  - name: Jerry_haz_backpack
+    palette: main_palette
+    images:
+      - Jerry_weaponized/Jerry_weaponized0.png
+      - Jerry_weaponized/Jerry_weaponized1.png
+      - Jerry_weaponized/Jerry_weaponized2.png
+      - Jerry_weaponized/Jerry_weaponized3.png
+      - Jerry_weaponized/Jerry_weaponized4.png
+      - Jerry_weaponized/Jerry_weaponized5.png
+      - Jerry_weaponized/Jerry_weaponized6.png
+      - Jerry_weaponized/Jerry_weaponized7.png
+      - Jerry_weaponized/Jerry_weaponized8.png
+      - Jerry_weaponized/Jerry_weaponized9.png
+      - Jerry_weaponized/Jerry_weaponized10.png
+      - Jerry_weaponized/Jerry_weaponized11.png
+
+  - name: OH_MITOSIS_HE_HAS_A_GUN
+    palette: main_palette
+    images:
+      - Jerry_firing/Jerry_firing0.png
+      - Jerry_firing/Jerry_firing1.png
+      - Jerry_firing/Jerry_firing2.png
+      - Jerry_firing/Jerry_firing3.png
+      - Jerry_firing/Jerry_firing4.png
+      - Jerry_firing/Jerry_firing5.png
+      - Jerry_firing/Jerry_firing6.png
+      - Jerry_firing/Jerry_firing7.png
+      - Jerry_firing/Jerry_firing8.png
+      - Jerry_firing/Jerry_firing9.png
+      - Jerry_firing/Jerry_firing10.png
+      - Jerry_firing/Jerry_firing11.png
+
+  - name: Ded
+    palette: main_palette
+    images:
+      - Jerry_ded/Jerry_ded0.png
+      - Jerry_ded/Jerry_ded1.png
+      - Jerry_ded/Jerry_ded2.png
+      - Jerry_ded/Jerry_ded3.png
+
+  - name: FWOOOSH
+    palette: main_palette
+    images:
+      - fire/fire0.png
+      - fire/fire1.png
+      - fire/fire2.png
+      - fire/fire3.png
+      - fire/fire4.png
+      - fire/fire5.png
+      - fire/fire6.png
+      - fire/fire7.png
+      - fire/fire8.png
+      - fire/fire9.png
+      - fire/fire10.png
+      - fire/fire11.png
+
+  - name: hearts
+    palette: main_palette
+    tilesets:
+      tile-width:  16
+      tile-height: 15
+      images:
+        - heart.bmp
+
+  - name: HUD
+    palette: main_palette
+    images:
+      - scorebar.bmp
+      - hud.bmp
+      - timer.bmp
+
+  - name: ingredients
+    palette: main_palette
+    tilesets:
+      tile-width:  12
+      tile-height: 12
+      images:
+        - ingredients.bmp
+  
+  - name: ha_ha_heavy_sandwhich #unexpected TF2
+    palette: main_palette
+    tilesets:
+      tile-width:  32
+      tile-height: 40
+      images:
+        - slamwhich.bmp
+
+  - name: menu_room_tileset
+    palette: main_palette
+    compress: zx7
+    tilesets:
+      tile-width:  32
+      tile-height: 32
+      images:
+        - hub_room/hr_tileset.bmp
+
+  - name: storeroom_tileset
+    palette: main_palette
+    compress: zx7
+    tilesets:
+      tile-width:  32
+      tile-height: 32
+      images:
+        - storeroom_arena/sr_tileset.bmp
+
+  - name: confirmation_background
+    palette: main_palette
+    tilesets:
+      tile-width:  140
+      tile-height: 120
+      images:
+        - confirm.bmp
+
+outputs:
+  - type: c
+    include-file: gfx.h
+    directory: converts
+    palettes:
+      - main_palette
+    converts:
+      - Jerry_sprite
+      - Jerry_haz_backpack
+      - OH_MITOSIS_HE_HAS_A_GUN
+      - Ded
+      - FWOOOSH
+      - hearts
+      - HUD
+      - ingredients
+      - ha_ha_heavy_sandwhich
+      - menu_room_tileset
+      - storeroom_tileset
+      - confirmation_background
